@@ -152,6 +152,27 @@
   @media (prefers-reduced-motion: reduce){ .sprocket-l, .sprocket-r{animation:none;} }
   @keyframes spin{ to{ transform:rotate(360deg); } }
 
+  .hero-art{position:relative;}
+  .hero-video-card{
+    position:relative; width:100%; max-width:460px; aspect-ratio:16/9;
+    border-radius:10px; overflow:hidden; background:var(--navy-deep);
+    box-shadow:0 18px 40px -16px rgba(15,36,54,.35);
+  }
+  .hero-video-card video{
+    width:100%; height:100%; object-fit:cover; display:block;
+    opacity:1; transition:opacity .7s ease;
+  }
+  .hero-svg-fallback{
+    position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
+    padding:12%; opacity:0; transition:opacity .7s ease; pointer-events:none;
+  }
+  .hero-svg-fallback svg{width:100%; height:auto;}
+  .hero-video-card.is-done video{opacity:0;}
+  .hero-video-card.is-done .hero-svg-fallback{opacity:1;}
+  .hero-video-card.no-video{background:transparent; box-shadow:none;}
+  .hero-video-card.no-video video{display:none;}
+
+
   /* stat strip */
   .stats{
     border-top:1px solid var(--line); border-bottom:1px solid var(--line);
@@ -318,6 +339,11 @@
         </div>
       </div>
       <div class="hero-art">
+        <div class="hero-video-card" id="heroVideoCard">
+          <video autoplay muted playsinline id="heroBrandVideo">
+            <source src="CC_Systems_Brand_Intro.mp4" type="video/mp4">
+          </video>
+          <div class="hero-svg-fallback">
         <svg viewBox="0 0 352 200" role="img" aria-label="Illustration of a chain and sprocket drive">
           <!-- chain loop -->
           <path d="M 96 32 L 256 32 A 68 68 0 0 1 256 168 L 96 168 A 68 68 0 0 1 96 32 Z"
@@ -361,6 +387,8 @@
             <circle cx="256" cy="100" r="7" fill="var(--navy)"/>
           </g>
         </svg>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -506,5 +534,26 @@
     a.addEventListener('click', function(){ links.classList.remove('open'); burger.setAttribute('aria-expanded','false'); });
   });
 </script>
+
+  <script>
+  (function(){
+    var KEY = 'ccHeroIntroSeen';
+    var card = document.getElementById('heroVideoCard');
+    var v = document.getElementById('heroBrandVideo');
+    if(!card || !v) return;
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var seen = false;
+    try{ seen = sessionStorage.getItem(KEY) === '1'; }catch(e){}
+    if(reduce || seen){
+      card.classList.add('is-done');
+      card.classList.add('no-video');
+      v.pause();
+      return;
+    }
+    try{ sessionStorage.setItem(KEY, '1'); }catch(e){}
+    v.addEventListener('ended', function(){ card.classList.add('is-done'); });
+    v.addEventListener('error', function(){ card.classList.add('is-done'); card.classList.add('no-video'); });
+  })();
+  </script>
 </body>
 </html>
