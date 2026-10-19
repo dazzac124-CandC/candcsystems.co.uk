@@ -548,9 +548,10 @@
     var v = document.getElementById('heroBrandVideo');
     if(!card || !v) return;
     var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var isMobile = window.matchMedia('(max-width: 880px)').matches;
     var seen = false;
     try{ seen = sessionStorage.getItem(KEY) === '1'; }catch(e){}
-    if(reduce || seen){
+    if(reduce || isMobile || seen){
       card.classList.add('is-done');
       card.classList.add('no-video');
       v.pause();
