@@ -296,6 +296,14 @@
   @media (max-width: 880px){
     .hero .wrap{grid-template-columns:1fr;}
     .hero-art{order:-1; max-width:300px; margin:0 auto 12px;}
+    .hero-video-card{
+      background:none; box-shadow:none; aspect-ratio:auto; position:static;
+      width:auto; max-width:300px; margin:0 auto;
+    }
+    .hero-video-card video, .hero-video-card source{display:none;}
+    .hero-svg-fallback{
+      position:static; display:block; opacity:1; padding:0; pointer-events:auto;
+    }
     .about-grid, .contact-grid{grid-template-columns:1fr; gap:36px;}
     .stats .wrap{grid-template-columns:1fr;}
     .stat{border-left:none; border-top:1px solid var(--line);}
