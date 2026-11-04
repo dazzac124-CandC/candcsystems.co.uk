@@ -128,7 +128,7 @@
   /* ---------------- hero ---------------- */
   .hero{
     position:relative; overflow:hidden;
-    padding:64px 0 0;
+    padding:28px 0 0;
     background:var(--navy-dark); color:#fff;
   }
   .hero .wrap{display:block;}
@@ -137,8 +137,8 @@
   .hero h1{
     font-size:clamp(34px, 4.4vw, 56px); letter-spacing:-.01em; max-width:24ch; color:#fff;
   }
-  .hero .lede{font-size:18px; margin-top:20px; max-width:54ch; color:#C9D8E5;}
-  .cta-row{display:flex; gap:16px; margin-top:30px; flex-wrap:wrap;}
+  .hero .lede{font-size:18px; margin-top:16px; max-width:54ch; color:#C9D8E5;}
+  .cta-row{display:flex; gap:16px; margin-top:24px; flex-wrap:wrap;}
   .btn{
     display:inline-block; text-decoration:none; font-weight:600; font-size:15px;
     padding:13px 24px; border-radius:var(--radius); border:2px solid var(--navy-deep);
@@ -153,11 +153,11 @@
   .hero .btn.ghost:hover{border-color:var(--brass); color:#E2B98A;}
 
   /* shackle line: overhead rail, chain, sprockets and hanging birds */
-  .line{margin-top:12px; line-height:0;}
+  .line{margin-top:6px; line-height:0;}
   .line{max-width:1920px; margin-left:auto; margin-right:auto;}
-  .line svg{display:block; width:100%; height:240px;}
+  .line svg{display:block; width:100%; height:228px;}
   /* wider than the drawing: scale it proportionally so nothing is cropped */
-  @media (min-width:1441px){ .line svg{height:auto; aspect-ratio:1440 / 240;} }
+  @media (min-width:1441px){ .line svg{height:auto; aspect-ratio:1440 / 228;} }
   .l-rail{fill:#2A5273;}
   .l-rail-hi{fill:#8FA9C2; opacity:.6;}
   .l-rail-lo{fill:#0F2536;}
@@ -302,7 +302,7 @@
   .foot-links a{color:#B9CCDA;}
 
   @media (max-width: 880px){
-    .hero{padding-top:48px;}
+    .hero{padding-top:28px;}
     .about-grid, .contact-grid{grid-template-columns:1fr; gap:36px;}
     .stats .wrap{grid-template-columns:1fr;}
     .stat{border-left:none; border-top:1px solid var(--line);}
@@ -354,14 +354,14 @@
     </div>
 
     <div class="line" aria-hidden="true">
-      <svg viewBox="0 0 1440 240" preserveAspectRatio="xMidYMin slice" xmlns="http://www.w3.org/2000/svg">
+      <svg viewBox="0 0 1440 228" preserveAspectRatio="xMidYMin slice" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <linearGradient id="fadeGrad" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1440" y2="0">
-            <stop offset="0.0625" stop-color="#000"/><stop offset="0.16" stop-color="#fff"/>
-            <stop offset="0.84" stop-color="#fff"/><stop offset="0.9375" stop-color="#000"/>
+            <stop offset="0.095" stop-color="#000"/><stop offset="0.16" stop-color="#fff"/>
+            <stop offset="0.84" stop-color="#fff"/><stop offset="0.905" stop-color="#000"/>
           </linearGradient>
-          <mask id="edgeFade" maskUnits="userSpaceOnUse" x="0" y="0" width="1440" height="240">
-            <rect x="0" y="0" width="1440" height="240" fill="url(#fadeGrad)"/>
+          <mask id="edgeFade" maskUnits="userSpaceOnUse" x="0" y="0" width="1440" height="228">
+            <rect x="0" y="0" width="1440" height="228" fill="url(#fadeGrad)"/>
           </mask>
           <radialGradient id="skin" cx="0.38" cy="0.3" r="0.8">
             <stop offset="0" stop-color="#F6EEE2"/><stop offset="0.6" stop-color="#E4D4BE"/><stop offset="1" stop-color="#BFA98C"/>
@@ -399,21 +399,6 @@
         <rect class="l-post" x="760" y="0" width="10" height="22"/>
         <rect class="l-post" x="1120" y="0" width="10" height="22"/>
 
-        <g transform="translate(70 96.56)"><g class="spin">
-            <polygon class="l-spr" points="-5.4,-38.2 5.4,-38.2 9.5,-48.6 16.1,-46.9 14.4,-35.8 23.7,-30.4 32.5,-37.4 37.4,-32.5 30.4,-23.7 35.8,-14.4 46.9,-16.1 48.6,-9.5 38.2,-5.4 38.2,5.4 48.6,9.5 46.9,16.1 35.8,14.4 30.4,23.7 37.4,32.5 32.5,37.4 23.7,30.4 14.4,35.8 16.1,46.9 9.5,48.6 5.4,38.2 -5.4,38.2 -9.5,48.6 -16.1,46.9 -14.4,35.8 -23.7,30.4 -32.5,37.4 -37.4,32.5 -30.4,23.7 -35.8,14.4 -46.9,16.1 -48.6,9.5 -38.2,5.4 -38.2,-5.4 -48.6,-9.5 -46.9,-16.1 -35.8,-14.4 -30.4,-23.7 -37.4,-32.5 -32.5,-37.4 -23.7,-30.4 -14.4,-35.8 -16.1,-46.9 -9.5,-48.6"/>
-            <circle class="l-ring" cx="0" cy="0" r="34"/>
-            <line class="l-spoke" x1="0" y1="0" x2="34.0" y2="0.0"/><line class="l-spoke" x1="0" y1="0" x2="17.0" y2="29.4"/><line class="l-spoke" x1="0" y1="0" x2="-17.0" y2="29.4"/><line class="l-spoke" x1="0" y1="0" x2="-34.0" y2="0.0"/><line class="l-spoke" x1="0" y1="0" x2="-17.0" y2="-29.4"/><line class="l-spoke" x1="0" y1="0" x2="17.0" y2="-29.4"/>
-            <circle class="l-hub" cx="0" cy="0" r="11"/>
-            <circle class="l-pin" cx="0" cy="0" r="4"/>
-          </g></g>
-        <g transform="translate(1370 96.56)"><g class="spin">
-            <polygon class="l-spr" points="-5.4,-38.2 5.4,-38.2 9.5,-48.6 16.1,-46.9 14.4,-35.8 23.7,-30.4 32.5,-37.4 37.4,-32.5 30.4,-23.7 35.8,-14.4 46.9,-16.1 48.6,-9.5 38.2,-5.4 38.2,5.4 48.6,9.5 46.9,16.1 35.8,14.4 30.4,23.7 37.4,32.5 32.5,37.4 23.7,30.4 14.4,35.8 16.1,46.9 9.5,48.6 5.4,38.2 -5.4,38.2 -9.5,48.6 -16.1,46.9 -14.4,35.8 -23.7,30.4 -32.5,37.4 -37.4,32.5 -30.4,23.7 -35.8,14.4 -46.9,16.1 -48.6,9.5 -38.2,5.4 -38.2,-5.4 -48.6,-9.5 -46.9,-16.1 -35.8,-14.4 -30.4,-23.7 -37.4,-32.5 -32.5,-37.4 -23.7,-30.4 -14.4,-35.8 -16.1,-46.9 -9.5,-48.6"/>
-            <circle class="l-ring" cx="0" cy="0" r="34"/>
-            <line class="l-spoke" x1="0" y1="0" x2="34.0" y2="0.0"/><line class="l-spoke" x1="0" y1="0" x2="17.0" y2="29.4"/><line class="l-spoke" x1="0" y1="0" x2="-17.0" y2="29.4"/><line class="l-spoke" x1="0" y1="0" x2="-34.0" y2="0.0"/><line class="l-spoke" x1="0" y1="0" x2="-17.0" y2="-29.4"/><line class="l-spoke" x1="0" y1="0" x2="17.0" y2="-29.4"/>
-            <circle class="l-hub" cx="0" cy="0" r="11"/>
-            <circle class="l-pin" cx="0" cy="0" r="4"/>
-          </g></g>
-
         <line class="chainBase" x1="70" y1="52" x2="1370" y2="52" stroke-width="3"/>
         <line class="chainA" x1="70" y1="52" x2="1370" y2="52" stroke-width="8" stroke-dasharray="16 6"/>
         <line class="chainB" x1="70" y1="52" x2="1370" y2="52" stroke-width="4" stroke-linecap="round" stroke-dasharray="0.01 21.99" stroke-dashoffset="-3"/>
@@ -429,6 +414,21 @@
             <g transform="translate(1320 52)"><use href="#trolley"/><g class="sway" style="animation-delay:-1.5s"><use href="#carc"/></g></g>
           </g>
         </g>
+
+        <g transform="translate(70 96.56)"><g class="spin">
+            <polygon class="l-spr" points="-5.4,-38.2 5.4,-38.2 9.5,-48.6 16.1,-46.9 14.4,-35.8 23.7,-30.4 32.5,-37.4 37.4,-32.5 30.4,-23.7 35.8,-14.4 46.9,-16.1 48.6,-9.5 38.2,-5.4 38.2,5.4 48.6,9.5 46.9,16.1 35.8,14.4 30.4,23.7 37.4,32.5 32.5,37.4 23.7,30.4 14.4,35.8 16.1,46.9 9.5,48.6 5.4,38.2 -5.4,38.2 -9.5,48.6 -16.1,46.9 -14.4,35.8 -23.7,30.4 -32.5,37.4 -37.4,32.5 -30.4,23.7 -35.8,14.4 -46.9,16.1 -48.6,9.5 -38.2,5.4 -38.2,-5.4 -48.6,-9.5 -46.9,-16.1 -35.8,-14.4 -30.4,-23.7 -37.4,-32.5 -32.5,-37.4 -23.7,-30.4 -14.4,-35.8 -16.1,-46.9 -9.5,-48.6"/>
+            <circle class="l-ring" cx="0" cy="0" r="34"/>
+            <line class="l-spoke" x1="0" y1="0" x2="34.0" y2="0.0"/><line class="l-spoke" x1="0" y1="0" x2="17.0" y2="29.4"/><line class="l-spoke" x1="0" y1="0" x2="-17.0" y2="29.4"/><line class="l-spoke" x1="0" y1="0" x2="-34.0" y2="0.0"/><line class="l-spoke" x1="0" y1="0" x2="-17.0" y2="-29.4"/><line class="l-spoke" x1="0" y1="0" x2="17.0" y2="-29.4"/>
+            <circle class="l-hub" cx="0" cy="0" r="11"/>
+            <circle class="l-pin" cx="0" cy="0" r="4"/>
+          </g></g>
+        <g transform="translate(1370 96.56)"><g class="spin">
+            <polygon class="l-spr" points="-5.4,-38.2 5.4,-38.2 9.5,-48.6 16.1,-46.9 14.4,-35.8 23.7,-30.4 32.5,-37.4 37.4,-32.5 30.4,-23.7 35.8,-14.4 46.9,-16.1 48.6,-9.5 38.2,-5.4 38.2,5.4 48.6,9.5 46.9,16.1 35.8,14.4 30.4,23.7 37.4,32.5 32.5,37.4 23.7,30.4 14.4,35.8 16.1,46.9 9.5,48.6 5.4,38.2 -5.4,38.2 -9.5,48.6 -16.1,46.9 -14.4,35.8 -23.7,30.4 -32.5,37.4 -37.4,32.5 -30.4,23.7 -35.8,14.4 -46.9,16.1 -48.6,9.5 -38.2,5.4 -38.2,-5.4 -48.6,-9.5 -46.9,-16.1 -35.8,-14.4 -30.4,-23.7 -37.4,-32.5 -32.5,-37.4 -23.7,-30.4 -14.4,-35.8 -16.1,-46.9 -9.5,-48.6"/>
+            <circle class="l-ring" cx="0" cy="0" r="34"/>
+            <line class="l-spoke" x1="0" y1="0" x2="34.0" y2="0.0"/><line class="l-spoke" x1="0" y1="0" x2="17.0" y2="29.4"/><line class="l-spoke" x1="0" y1="0" x2="-17.0" y2="29.4"/><line class="l-spoke" x1="0" y1="0" x2="-34.0" y2="0.0"/><line class="l-spoke" x1="0" y1="0" x2="-17.0" y2="-29.4"/><line class="l-spoke" x1="0" y1="0" x2="17.0" y2="-29.4"/>
+            <circle class="l-hub" cx="0" cy="0" r="11"/>
+            <circle class="l-pin" cx="0" cy="0" r="4"/>
+          </g></g>
       </svg>
     </div>
 
