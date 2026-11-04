@@ -357,8 +357,8 @@
       <svg viewBox="0 0 1440 228" preserveAspectRatio="xMidYMin slice" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <linearGradient id="fadeGrad" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1440" y2="0">
-            <stop offset="0.095" stop-color="#000"/><stop offset="0.16" stop-color="#fff"/>
-            <stop offset="0.84" stop-color="#fff"/><stop offset="0.905" stop-color="#000"/>
+            <stop offset="0.0625" stop-color="#000"/><stop offset="0.16" stop-color="#fff"/>
+            <stop offset="0.84" stop-color="#fff"/><stop offset="0.9375" stop-color="#000"/>
           </linearGradient>
           <mask id="edgeFade" maskUnits="userSpaceOnUse" x="0" y="0" width="1440" height="228">
             <rect x="0" y="0" width="1440" height="228" fill="url(#fadeGrad)"/>
@@ -399,6 +399,21 @@
         <rect class="l-post" x="760" y="0" width="10" height="22"/>
         <rect class="l-post" x="1120" y="0" width="10" height="22"/>
 
+        <g transform="translate(70 96.56)"><g class="spin">
+            <polygon class="l-spr" points="-5.4,-38.2 5.4,-38.2 9.5,-48.6 16.1,-46.9 14.4,-35.8 23.7,-30.4 32.5,-37.4 37.4,-32.5 30.4,-23.7 35.8,-14.4 46.9,-16.1 48.6,-9.5 38.2,-5.4 38.2,5.4 48.6,9.5 46.9,16.1 35.8,14.4 30.4,23.7 37.4,32.5 32.5,37.4 23.7,30.4 14.4,35.8 16.1,46.9 9.5,48.6 5.4,38.2 -5.4,38.2 -9.5,48.6 -16.1,46.9 -14.4,35.8 -23.7,30.4 -32.5,37.4 -37.4,32.5 -30.4,23.7 -35.8,14.4 -46.9,16.1 -48.6,9.5 -38.2,5.4 -38.2,-5.4 -48.6,-9.5 -46.9,-16.1 -35.8,-14.4 -30.4,-23.7 -37.4,-32.5 -32.5,-37.4 -23.7,-30.4 -14.4,-35.8 -16.1,-46.9 -9.5,-48.6"/>
+            <circle class="l-ring" cx="0" cy="0" r="34"/>
+            <line class="l-spoke" x1="0" y1="0" x2="34.0" y2="0.0"/><line class="l-spoke" x1="0" y1="0" x2="17.0" y2="29.4"/><line class="l-spoke" x1="0" y1="0" x2="-17.0" y2="29.4"/><line class="l-spoke" x1="0" y1="0" x2="-34.0" y2="0.0"/><line class="l-spoke" x1="0" y1="0" x2="-17.0" y2="-29.4"/><line class="l-spoke" x1="0" y1="0" x2="17.0" y2="-29.4"/>
+            <circle class="l-hub" cx="0" cy="0" r="11"/>
+            <circle class="l-pin" cx="0" cy="0" r="4"/>
+          </g></g>
+        <g transform="translate(1370 96.56)"><g class="spin">
+            <polygon class="l-spr" points="-5.4,-38.2 5.4,-38.2 9.5,-48.6 16.1,-46.9 14.4,-35.8 23.7,-30.4 32.5,-37.4 37.4,-32.5 30.4,-23.7 35.8,-14.4 46.9,-16.1 48.6,-9.5 38.2,-5.4 38.2,5.4 48.6,9.5 46.9,16.1 35.8,14.4 30.4,23.7 37.4,32.5 32.5,37.4 23.7,30.4 14.4,35.8 16.1,46.9 9.5,48.6 5.4,38.2 -5.4,38.2 -9.5,48.6 -16.1,46.9 -14.4,35.8 -23.7,30.4 -32.5,37.4 -37.4,32.5 -30.4,23.7 -35.8,14.4 -46.9,16.1 -48.6,9.5 -38.2,5.4 -38.2,-5.4 -48.6,-9.5 -46.9,-16.1 -35.8,-14.4 -30.4,-23.7 -37.4,-32.5 -32.5,-37.4 -23.7,-30.4 -14.4,-35.8 -16.1,-46.9 -9.5,-48.6"/>
+            <circle class="l-ring" cx="0" cy="0" r="34"/>
+            <line class="l-spoke" x1="0" y1="0" x2="34.0" y2="0.0"/><line class="l-spoke" x1="0" y1="0" x2="17.0" y2="29.4"/><line class="l-spoke" x1="0" y1="0" x2="-17.0" y2="29.4"/><line class="l-spoke" x1="0" y1="0" x2="-34.0" y2="0.0"/><line class="l-spoke" x1="0" y1="0" x2="-17.0" y2="-29.4"/><line class="l-spoke" x1="0" y1="0" x2="17.0" y2="-29.4"/>
+            <circle class="l-hub" cx="0" cy="0" r="11"/>
+            <circle class="l-pin" cx="0" cy="0" r="4"/>
+          </g></g>
+
         <line class="chainBase" x1="70" y1="52" x2="1370" y2="52" stroke-width="3"/>
         <line class="chainA" x1="70" y1="52" x2="1370" y2="52" stroke-width="8" stroke-dasharray="16 6"/>
         <line class="chainB" x1="70" y1="52" x2="1370" y2="52" stroke-width="4" stroke-linecap="round" stroke-dasharray="0.01 21.99" stroke-dashoffset="-3"/>
@@ -414,21 +429,6 @@
             <g transform="translate(1320 52)"><use href="#trolley"/><g class="sway" style="animation-delay:-1.5s"><use href="#carc"/></g></g>
           </g>
         </g>
-
-        <g transform="translate(70 96.56)"><g class="spin">
-            <polygon class="l-spr" points="-5.4,-38.2 5.4,-38.2 9.5,-48.6 16.1,-46.9 14.4,-35.8 23.7,-30.4 32.5,-37.4 37.4,-32.5 30.4,-23.7 35.8,-14.4 46.9,-16.1 48.6,-9.5 38.2,-5.4 38.2,5.4 48.6,9.5 46.9,16.1 35.8,14.4 30.4,23.7 37.4,32.5 32.5,37.4 23.7,30.4 14.4,35.8 16.1,46.9 9.5,48.6 5.4,38.2 -5.4,38.2 -9.5,48.6 -16.1,46.9 -14.4,35.8 -23.7,30.4 -32.5,37.4 -37.4,32.5 -30.4,23.7 -35.8,14.4 -46.9,16.1 -48.6,9.5 -38.2,5.4 -38.2,-5.4 -48.6,-9.5 -46.9,-16.1 -35.8,-14.4 -30.4,-23.7 -37.4,-32.5 -32.5,-37.4 -23.7,-30.4 -14.4,-35.8 -16.1,-46.9 -9.5,-48.6"/>
-            <circle class="l-ring" cx="0" cy="0" r="34"/>
-            <line class="l-spoke" x1="0" y1="0" x2="34.0" y2="0.0"/><line class="l-spoke" x1="0" y1="0" x2="17.0" y2="29.4"/><line class="l-spoke" x1="0" y1="0" x2="-17.0" y2="29.4"/><line class="l-spoke" x1="0" y1="0" x2="-34.0" y2="0.0"/><line class="l-spoke" x1="0" y1="0" x2="-17.0" y2="-29.4"/><line class="l-spoke" x1="0" y1="0" x2="17.0" y2="-29.4"/>
-            <circle class="l-hub" cx="0" cy="0" r="11"/>
-            <circle class="l-pin" cx="0" cy="0" r="4"/>
-          </g></g>
-        <g transform="translate(1370 96.56)"><g class="spin">
-            <polygon class="l-spr" points="-5.4,-38.2 5.4,-38.2 9.5,-48.6 16.1,-46.9 14.4,-35.8 23.7,-30.4 32.5,-37.4 37.4,-32.5 30.4,-23.7 35.8,-14.4 46.9,-16.1 48.6,-9.5 38.2,-5.4 38.2,5.4 48.6,9.5 46.9,16.1 35.8,14.4 30.4,23.7 37.4,32.5 32.5,37.4 23.7,30.4 14.4,35.8 16.1,46.9 9.5,48.6 5.4,38.2 -5.4,38.2 -9.5,48.6 -16.1,46.9 -14.4,35.8 -23.7,30.4 -32.5,37.4 -37.4,32.5 -30.4,23.7 -35.8,14.4 -46.9,16.1 -48.6,9.5 -38.2,5.4 -38.2,-5.4 -48.6,-9.5 -46.9,-16.1 -35.8,-14.4 -30.4,-23.7 -37.4,-32.5 -32.5,-37.4 -23.7,-30.4 -14.4,-35.8 -16.1,-46.9 -9.5,-48.6"/>
-            <circle class="l-ring" cx="0" cy="0" r="34"/>
-            <line class="l-spoke" x1="0" y1="0" x2="34.0" y2="0.0"/><line class="l-spoke" x1="0" y1="0" x2="17.0" y2="29.4"/><line class="l-spoke" x1="0" y1="0" x2="-17.0" y2="29.4"/><line class="l-spoke" x1="0" y1="0" x2="-34.0" y2="0.0"/><line class="l-spoke" x1="0" y1="0" x2="-17.0" y2="-29.4"/><line class="l-spoke" x1="0" y1="0" x2="17.0" y2="-29.4"/>
-            <circle class="l-hub" cx="0" cy="0" r="11"/>
-            <circle class="l-pin" cx="0" cy="0" r="4"/>
-          </g></g>
       </svg>
     </div>
 
