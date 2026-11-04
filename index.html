@@ -154,7 +154,10 @@
 
   /* shackle line: overhead rail, chain, sprockets and hanging birds */
   .line{margin-top:12px; line-height:0;}
-  .line svg{display:block; width:100%; height:270px;}
+  .line{max-width:1920px; margin-left:auto; margin-right:auto;}
+  .line svg{display:block; width:100%; height:240px;}
+  /* wider than the drawing: scale it proportionally so nothing is cropped */
+  @media (min-width:1441px){ .line svg{height:auto; aspect-ratio:1440 / 240;} }
   .l-rail{fill:#2A5273;}
   .l-rail-hi{fill:#8FA9C2; opacity:.6;}
   .l-rail-lo{fill:#0F2536;}
@@ -351,14 +354,14 @@
     </div>
 
     <div class="line" aria-hidden="true">
-      <svg viewBox="0 0 1440 270" preserveAspectRatio="xMidYMin slice" xmlns="http://www.w3.org/2000/svg">
+      <svg viewBox="0 0 1440 240" preserveAspectRatio="xMidYMin slice" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <linearGradient id="fadeGrad" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1440" y2="0">
             <stop offset="0.0625" stop-color="#000"/><stop offset="0.16" stop-color="#fff"/>
             <stop offset="0.84" stop-color="#fff"/><stop offset="0.9375" stop-color="#000"/>
           </linearGradient>
-          <mask id="edgeFade" maskUnits="userSpaceOnUse" x="0" y="0" width="1440" height="270">
-            <rect x="0" y="0" width="1440" height="270" fill="url(#fadeGrad)"/>
+          <mask id="edgeFade" maskUnits="userSpaceOnUse" x="0" y="0" width="1440" height="240">
+            <rect x="0" y="0" width="1440" height="240" fill="url(#fadeGrad)"/>
           </mask>
           <radialGradient id="skin" cx="0.38" cy="0.3" r="0.8">
             <stop offset="0" stop-color="#F6EEE2"/><stop offset="0.6" stop-color="#E4D4BE"/><stop offset="1" stop-color="#BFA98C"/>
